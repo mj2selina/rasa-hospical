@@ -1,0 +1,24 @@
+version: "2.0"
+
+stories:
+  - story: query illness happy path
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: answer_illness
+    - action: action_ask_illness
+    - intent: answer_nothing
+    - action: utter_ask_duration
+    - intent: answer_duration
+    - action: action_query_finish
+
+  - story: query illness sad path1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: answer_illness
+    - action: action_ask_illness
+    - intent: answer_illness_for_supply
+    - action: utter_ask_duration
+    - intent: answer_duration
+    - action: action_query_finish

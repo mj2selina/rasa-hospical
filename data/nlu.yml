@@ -1,0 +1,94 @@
+version: "2.0"
+
+nlu:
+- lookup: illness
+  examples: |
+    - 头痛
+    - 头晕
+    - 头昏胀痛
+    - 乏力
+    - 疲倦
+    - 四肢无力
+    - 汗多
+    - 出虚汗
+    - 发热
+    - 发烧
+    - 口干
+    - 口苦
+    - 咳嗽
+    - 咳喘
+    - 气喘
+    - 呼吸不畅
+    - 胸闷
+    - 鼻塞
+    - 流涕
+    - 感冒
+    - 呕吐
+    - 咽痛
+    - 咽喉痛
+    - 多梦、失眠
+    - 耳鸣
+    - 恶心
+    - 腹胀、腹泻
+    - 腹泻
+    - 腹胀
+    - 失眠
+    - 多梦
+
+- intent: greet
+  examples: |
+    - 你好
+    - 哈喽
+    - 嗨
+    - 早上好
+    - 下午好
+    - 中午好
+    - hi
+    - hello
+
+- intent: answer_illness
+  examples: |
+    - 我觉得[头疼](illness)、[发烧](illness)
+    - 我[失眠](illness)、[恶心](illness)
+    - 我[恶心](illness)、[咳嗽](illness)、[气喘](illness)，应该是[感冒](illness)了
+    - 我有点[鼻塞](illness)、[胸闷](illness)
+    - 我好像有点[发热](illness)，还有点[出虚汗](illness)
+    - 我[咽喉痛](illness)，怎么办啊？
+    - [腹胀](illness)，还有点[腹泻](illness)
+    - 我[耳鸣](illness)，还有点[呼吸不畅](illness)
+    
+- intent: answer_nothing
+  examples: |
+    - 没有了
+    - 没其他得了
+    - 没有其他症状了
+    - 没了
+
+- intent: answer_duration
+  examples: |
+    - [2天](duration)了
+    - 大概[2天](duration)了
+    - [2天](duration)
+
+- intent: bot_challenge
+  examples: |
+    - 你是一个聊天机器人吗？
+
+- intent: goodbye
+  examples: |
+    - 拜拜
+    - 88
+    - 再见
+    - 谢谢
+
+- intent: answer_illness_for_supply
+  examples: |
+    - 还觉得[四肢乏力](illness)
+    - [口干](illness)
+    - [流涕](illness)
+    - 还有[出虚汗](illness)
+    - 好像还有点[胸闷](illness)
+    - 嗯，还有[耳鸣](illness)
+    - [鼻塞](illness)吧
+    - 脑子优点疼，[头昏胀痛](illness)
+    - 还有点[呕吐](illness)
